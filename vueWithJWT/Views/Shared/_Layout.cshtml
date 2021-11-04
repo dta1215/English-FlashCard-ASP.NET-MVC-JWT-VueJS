@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="~/Content/images/header.png" rel="preload" as="image" />
+    <link href="~/Content/images/woodBG.jpg" rel="preload" as="image" />
+    <link href="~/Content/images/darkblur.jpg" rel="preload" as="image" />
+    <link href="~/Content/images/bg2.jpg" rel="preload" as="image" />
+    <link href="~/Content/images/adsBG.jpg" rel="preload" as="image" />
+
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Scripts/vueCss")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    @RenderBody()
+       
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

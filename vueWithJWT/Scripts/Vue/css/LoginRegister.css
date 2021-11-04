@@ -1,0 +1,129 @@
+﻿.loginBG{
+
+}
+.LoginArea {
+    border-radius: 6px;
+    background: #3333330f;
+    margin: auto;
+    width: 35%;
+    padding: 1px 1px;
+}
+.inputArea {
+    margin: auto;
+    width: 70%;
+}
+.space{
+    height: 6px;
+}
+.loginBtn {
+    clear: both;
+    display: block;
+    margin: auto;
+    background: #357d93;
+    font-size: 16px;
+    padding: 7px 20px;
+}
+.showPassIcon {
+    float: right;
+    position: relative;
+    top: -28px;
+    right: 11px;
+    color: #9d035dbd;
+    cursor: pointer;
+}
+.registerBtn {
+    clear: both;
+    display: block;
+    margin: auto;
+    font-size: 16px;
+    padding: 7px 20px;
+}
+.registerArea {
+    margin: auto;
+    width: 70%;
+    text-align: center;
+}
+
+/*Register*/
+.btnCancle {
+    background: #9f9f9f;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.responsiveHeader{
+    display: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .header {
+        position: fixed !important;
+        left: 0;
+        top: 0;
+        right: 0;
+        z-index: 10;
+    }
+
+    .headerBox {
+        display: none;
+    }
+
+    .responsiveHeader {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: #1d326f;
+    }
+
+    .btnNavMenu {
+        position: absolute !important;
+        content: "\f0c9";
+        color: white;
+        font-size: 19px;
+        left: 3%;
+        top: 15px;
+    }
+    .logo-mobile {
+        padding-top: 10px;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        font-family: fantasy;
+    }
+    .mobile-Header {
+        display: flex;
+        top: 66px;
+        flex-direction: column;
+        height: 600px;
+        flex-wrap: wrap;
+        position: absolute;
+        align-items: start;
+        padding-top: 30px;
+        background-color: #1d326f;
+        padding: 20px 30px 10px 15px;
+        transform: translateX(-204px);
+        transition: transform 0.5s;
+    }
+    .active {
+        display: flex;
+        transform: translateX(0px);
+    }
+    .mobile-control {
+        margin-bottom: 6px;
+        color: #dfd7d7f0;
+        font-size: 17px;
+        border-radius: 2px;
+        padding: 4px;
+        text-align: center;
+    }
+    .mobile-control:hover, .mobile-control:active, .mobile-control:focus {
+        background: #010c68;
+        color: #ebe4e4;
+        text-decoration: none;
+    }
+}

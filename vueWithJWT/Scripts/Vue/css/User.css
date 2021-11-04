@@ -1,0 +1,40 @@
+﻿.loadImageModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #007ea3f5;
+    z-index: 9999;
+}
+
+.mainImageModal {
+    width: 500px;
+    height: auto;
+    margin: auto;
+    border: solid #3333332e 1px;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px #3333FF;
+    padding: 4px;
+    margin-top: 10%;
+}
+
+.inputUrlArea, .inputContentImageArea {
+    display: none;
+}
+
+.previewUserImg:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 1px 0px #047eb836;
+    padding: 2px;
+    border: solid #00000024 1px;
+    border-radius: 4px;
+}
+
+img.previewUserImg {
+    display: block;
+    width: 100%;
+    opacity: 1 !important;
+}

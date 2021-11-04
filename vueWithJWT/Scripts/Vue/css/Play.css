@@ -1,0 +1,385 @@
+﻿.col-md-3, .col-md-9 {
+    padding: 0px;
+}
+
+.flashCardContainer {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.slider {
+    display: flex;
+    width: 500px;
+    height: 100%;
+}
+
+.flashCard {
+    flex: none;
+    width: 500px;
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 1;
+    transition-duration: 0.1s;
+    padding: 0 4px;
+    border-radius: 4px;
+    border: solid #a7a7a72e 1px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.back {
+    z-index: -1;
+    opacity: 0;
+    transition-duration: 0.2s;
+    transform: rotateX(-90deg);
+    text-align: center;
+    padding-top: 30%;
+}
+
+.frontFlip {
+    opacity: 0;
+    transform: rotateX(180deg);
+}
+
+.backFlip {
+    opacity: 1;
+    transform: rotateX(0deg);
+}
+.vocabulary {
+    display: block;
+    margin: auto;
+    width: 100%;
+    object-fit: contain;
+    height: 100%;
+    padding: 10px;
+}
+
+imgPlay {
+    display: block;
+    height: 100%;
+    margin: auto;
+    padding: 10px;
+    max-width: 100%;
+}
+
+.loadingContainer {
+    width: 300px;
+    display: none;
+    margin: auto;
+    position: relative;
+    border-radius: 2px;
+    height: 2px;
+    background-color: #3333331f;
+}
+
+.loadingStatus {
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    background-color: #007bff6e;
+    border-radius: 2px;
+}
+
+.dummyflashCard {
+    background-color: #3333332e;
+}
+
+.dockMenu {
+    position: fixed;
+    top: 0;
+}
+
+.correctAnswerArea{
+    display: table;
+    margin: auto;
+}
+
+.matchingGameContainer {
+    min-height: 500px;
+    position: relative;
+    background-image: url(../../../Content/images/darkblur.jpg);
+    background-size: cover;
+}
+
+.startArea {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: #f1f1f3fc;
+}
+
+#btnStartGame {
+    font-size: 17px;
+    padding: 10px;
+    display: block;
+    margin: auto;
+    margin-top: 30%;
+}
+
+.matchingArea {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 5%;
+}
+
+.meaningArea {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.vocabularyArea {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.vocabularyCard, .meaningCard {
+    width: 145px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px;
+    background: whitesmoke;
+}
+
+.flashCardSelected {
+    background: #f0ff3399;
+}
+
+.meaningCard {
+    width: 250px;
+}
+
+.vocabularyAreaHover {
+    box-shadow: 0px 0px 6px 0px #3333FF;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 10px;
+}
+
+.imgMatching {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.completeMatchingArea {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+}
+
+.mainComplete {
+    margin: auto;
+    width: 670px;
+    background-color: #fffffffa;
+    border-radius: 4px;
+    border: solid #a7a7a72e 1px;
+}
+
+.completeControl {
+    margin: auto;
+    display: block;
+    width: 200px;
+}
+
+#btnCloseCompleteMatchingArea {
+}
+
+#btnPlayAgain {
+    margin: auto;
+    display: inline-block;
+}
+
+#btnEndGame {
+    display: none;
+}
+
+.timeArea {
+    display: table;
+    margin: auto;
+}
+
+.timming {
+}
+
+.stateContainer {
+    min-height: 300px;
+    width: 170px;
+    z-index: 9999;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.slideControlArea {
+    margin: auto;
+    display: table;
+}
+.flashCardControlArea {
+    display: table;
+    margin: auto;
+}
+
+.notPure {
+    animation: fadeIn 2.5s linear;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.pure {
+}
+
+.delete {
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0
+    }
+
+    100% {
+        display: none
+    }
+}
+
+.insert {
+    animation: fadeIn 6s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.showAnswer {
+    min-height: 40px;
+    font-size: 22px;
+    text-align: center;
+}
+
+#inputAnswer {
+    width: 300px;
+}
+
+.childbox-header {
+}
+
+.childbox-header-title {
+    font-size: 17px !important;
+}
+
+.childbox-header:hover {
+}
+
+.childbox-header-light {
+}
+
+.otherTopicArea {
+    width: 250px;
+    float: left;
+    margin-left: 25px;
+    min-height: 300px;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+    .otherTopicArea::-webkit-scrollbar {
+        width: 10px;
+        background-color: #f3f3f3b3;
+    }
+
+    .otherTopicArea::-webkit-scrollbar-thumb {
+        background: #d3d0d0ba;
+    }
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.showOtherTopic {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .flashCardContainer {
+        width: 300px;
+    }
+    .flashCardControlArea {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .matchingArea {
+        justify-content: space-between;
+    }
+
+    .meaningCard {
+        width: 180px;
+    }
+
+    .flashCardSelected {
+        background: #f0ff3399;
+    }
+
+    .mainComplete {
+        margin-bottom: 50%;
+        width: auto !important;
+        background-color: #ffffff;
+        border-radius: 4px;
+        border: solid #8dc1ca 1px;
+        text-align: center;
+        box-shadow: 0px 0px 10px 0px #989898ba;
+    }
+    .correctAnswerArea {
+        text-align: center;
+    }
+}

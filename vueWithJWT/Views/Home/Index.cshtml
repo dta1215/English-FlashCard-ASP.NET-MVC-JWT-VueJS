@@ -1,0 +1,80 @@
+﻿@*<text>Token</text><input id="txtToken" type="text" value="" />
+    <button id="btnGetProduct">Get Products</button>*@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    @*<link href="~/Scripts/Vue/css/Common.css" rel="stylesheet" />
+    <link href="~/Scripts/Vue/css/Play.css" rel="stylesheet" />
+    <link href="~/Scripts/Vue/css/User.css" rel="stylesheet" />
+    <link href="~/Scripts/Vue/css/LoginRegister.css" rel="stylesheet" />
+    <link href="~/Scripts/Vue/css/Admin.css" rel="stylesheet" />*@
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css?v=3" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    @@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+    body {
+        font-family: 'Quicksand', sans-serif;
+    }
+</style>
+<body>
+    <div id="app"></div>
+
+    @section scripts{
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+        <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+        <script src="https://unpkg.com/vue-router/dist/vue-router.min.js"></script>
+        <script src="https://unpkg.com/vuex@2.0.0"></script>
+
+        @*<script src="~/Scripts/Vue/Component/Search.js"></script>
+        <script src="~/Scripts/Vue/Component/FlashCards.js"></script>
+        <script src="~/Scripts/Vue/Component/Play.js"></script>
+        <script src="~/Scripts/Vue/Component/ListTopicPattern.js"></script>
+        <script src="~/Scripts/Vue/Component/Share.js"></script>
+        <script src="~/Scripts/Vue/Component/Topics.js"></script>
+        <script src="~/Scripts/Vue/Component/User.js"></script>
+        <script src="~/Scripts/Vue/Component/Admin/Admin.js"></script>
+        <script src="~/Scripts/Vue/Component/Auth/Register.js"></script>
+        <script src="~/Scripts/Vue/Component/Auth/Login.js"></script>
+        <script src="~/Scripts/Vue/Component/Header.js"></script>
+        <script src="./Scripts/Vue/Home.js"></script>
+        <script src="./Scripts/Vue/App.js"></script>*@
+
+        @Scripts.Render("~/bundles/vueJS")
+
+    }
+</body>
+</html>
+
+
+
+
+
+@*@section scripts{
+        <script>
+            $('#btnGetProduct').click(async () => {
+                const token = $('#txtToken').val()
+                try {
+                    $.ajax({
+                        url: `/Token/products`,
+                        type: "GET",
+                        headers: { "Authorization": "Bearer " + token },
+                        success: function (res, status, xhr) {
+                            console.log(res, status, xhr)
+                            alert(xhr.status)
+                        },
+                        error: function (xhr, status, error) {
+                            console.log(xhr, status, error)
+                            alert(xhr.status + " " + error)
+                        }
+                    })
+                } catch (e) {
+                    console.log("error" + e)
+                }
+
+            })
+
+        </script>
+    }*@

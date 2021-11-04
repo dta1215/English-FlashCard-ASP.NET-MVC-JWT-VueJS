@@ -1,0 +1,111 @@
+﻿/*admin*/
+/*highest level*/
+.adminArea {
+   
+}
+.adminMainView {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 80%;
+    margin: auto;
+}
+
+
+/*user*/
+.registerArea {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    place-content: flex-start;
+}
+
+
+
+
+/*sidebar*/
+.adminLogo {
+    text-align: center;
+    color: white;
+}
+.titleMenu{
+    font-size: 17px;
+    font-weight: 700;
+}
+.sideBar {
+    position: fixed;
+    left: 0;
+    width: 220px;
+    min-height: 680px;
+    background: #42467d;
+    color: white;
+    font-size: 17px;
+    line-height: 3;
+    vertical-align: middle;
+    font-family: sans-serif;
+    z-index: 999;
+}
+.linkToNormal{
+    padding: 0 12px;
+}
+.linkToNormal:hover, .linkToNormal:focus{
+    background: #ffffff17;
+}
+
+.linkToNormal, .linkToNormal:focus, .linkToNormal:hover {
+    color: white;
+    font-size: 17px;
+    display: block;
+    
+}
+
+.breakLine {
+    padding: 0px 10px;
+    border-bottom: solid 1px #2727279c;
+    box-shadow: 0 1px 1px 0px #a5a5a559;
+}
+
+
+/*header*/
+.headerAdmin {
+    height: 40px;
+    background: #42467d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}  
+.sideBarMobile {
+    display: none;
+    color: white;
+    position: fixed;
+    top: 6px;
+    left: 2px;
+    font-size: 14px;
+    padding: 2px 7px;
+    z-index: 9999;
+    border: solid #33333369 1px;
+    box-shadow: 0px 0px 1px 1px rgb(211 211 211 / 15%);
+    background: #42467d;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .sideBarMobile{
+        display: block;
+    }
+    .sideBar{
+        display: none;
+    }
+    .adminMainView {
+        width: 100%;
+    }
+    .navigator{
+        text-align:center;
+    }
+    h1, h2, h3 {
+        text-align: center;
+    }
+}
+
